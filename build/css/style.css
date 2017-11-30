@@ -1,0 +1,229 @@
+.post-featured-image {
+    width: 100%;
+    display: block;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    margin: 0;
+    line-height: 1.6;
+    font-size: 18px;
+    color: #1B1B1B;
+    font-family: 'Raleway', sans-serif;
+
+    background-image: url("/img/dark_embroidery.png");
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+
+.literallyjosh-body {
+}
+
+.literallyjosh-nav {
+    background: white;
+    padding-top: 32px;
+    position: static;
+}
+
+.literallyjosh-ads {
+}
+
+.sidebar {
+
+}
+
+.sidebar > a {
+    text-decoration: none;
+}
+
+.post {
+    font-size: 18px;
+    padding-bottom: 20px;
+    background-color: #F5F5F5;
+    border-bottom-right-radius: 1em;
+    border-bottom-left-radius: 1em;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.post-contents {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.post-title {
+    height: 64px;
+    color: white;
+    background: #111111;
+}
+
+.post-title > h1 {
+    padding: 0;
+    padding-left: 16px;
+    margin: 0;
+
+    height: 100%;
+    width: 100%;
+}
+
+.site-title {
+    font-family: 'Roboto';
+    font-size: 2em;
+    font-weight: bold;
+    color: #E91E63;
+    margin: 0;
+    text-align: center;
+}
+
+.site-title > a {
+    color: #E91E63;
+    text-decoration: none;
+}
+
+.literallyjosh, .literallyjosh-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.literallyjosh-nav {
+    order: -1;
+}
+
+.literallyjosh-content {
+
+}
+
+.logo {
+    margin: auto;
+    max-width: 192px;
+    background: #E91E63;
+    border-radius: 50%;
+
+    width: 64px;
+    height: 64px;
+    display: none;
+}
+
+.side-button {
+    font-family: 'Roboto';
+    font-size: 35px;
+    font-weight: bold;
+    padding: 20px;
+    vertical-align: middle;
+    background: white;
+    color: #E91E63;
+    text-overflow: ellipsis;
+    height: 42px;
+}
+
+.side-button:hover {
+    background: #E91E63;
+    color: white;
+}
+
+.social-badges {
+    margin: 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.social-badges > a {
+    text-decoration: none;
+}
+
+.social-badges > a > i {
+    color: rgb(59, 59, 59);
+    font-size: 2em;
+    vertical-align: middle;
+}
+
+.social-badges > a > i:hover {
+    color: #E91E63;
+    cursor: grab;
+}
+
+.navigation_bar_link {
+    text-decoration: none;
+}
+
+.section-seperator {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+}
+
+.side-button-links {
+    text-decoration: none;
+}
+
+.section-seperator {
+    display: none;
+}
+
+#hamburger {
+    width: 32px;
+    height: 32px;
+
+    display: inline-block;
+    float: right;
+
+    position: absolute;
+    right: 32px;
+    top: 32px;
+
+    color: #E91E63;
+    font-size: 2em;
+}
+
+@media (min-width:800px) {
+    #hamburger {
+        display: none;
+    }
+
+    .section-seperator {
+        display: block;
+    }
+
+    .logo {
+        float: none;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+
+    .literallyjosh-body {
+        flex-direction: row;
+        flex: 1;
+    }
+
+    .literallyjosh-content {
+        position: relative;
+        width: auto;
+        margin-left: 18em;
+        flex: 1;
+    }
+
+    .literallyjosh-nav, .literallyjosh-ads {
+        height: 100%;
+        position: fixed;
+        width: 18em;
+        flex: 0 0 18em;
+    }
+
+    .post {
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+    }
+}
+
+@media (max-width:1024px) {
+    .post {
+        margin-top: 1vh;
+        margin-bottom: 1vh;
+    }
+}
