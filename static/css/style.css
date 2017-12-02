@@ -15,7 +15,7 @@ body {
     color: #1B1B1B;
     font-family: 'Raleway', sans-serif;
 
-    background-image: url("/img/dark_embroidery.png");
+    background-image: url("/img/background.png");
     background-repeat: repeat;
     background-attachment: fixed;
 }
@@ -25,7 +25,6 @@ body {
 
 .literallyjosh-nav {
     background: white;
-    padding-top: 32px;
     position: static;
 }
 
@@ -59,7 +58,7 @@ body {
 .post-title {
     height: 64px;
     color: white;
-    background: #111111;
+    background: black;
 }
 
 .post-title > h1 {
@@ -104,8 +103,14 @@ body {
     background: #E91E63;
     border-radius: 50%;
 
+    border: 3px solid #E91E63;
+
     width: 64px;
     height: 64px;
+    display: none;
+}
+
+#side-buttons {
     display: none;
 }
 
@@ -173,8 +178,8 @@ body {
     float: right;
 
     position: absolute;
-    right: 32px;
-    top: 32px;
+    right: 16px;
+    top: 0px;
 
     color: #E91E63;
     font-size: 2em;
@@ -183,6 +188,10 @@ body {
 @media (min-width:800px) {
     #hamburger {
         display: none;
+    }
+
+    #side-buttons {
+        display: block;
     }
 
     .section-seperator {
@@ -213,6 +222,10 @@ body {
         position: fixed;
         width: 18em;
         flex: 0 0 18em;
+        padding-top: 32px;
+
+
+        border-right: 1px solid #111111;
     }
 
     .post {

@@ -98,6 +98,20 @@
       $("#hamburger").click(() => {
         $("#side-buttons").slideToggle(100);
       })
+
+      var win = $(window);
+      var sideButtons = $("#side-buttons");
+
+      win.resize(() => {
+        var width = document.body.scrollWidth + 1;
+
+        if(width >= 800) {
+          sideButtons.show();
+          return;
+        }
+
+        sideButtons.hide();
+      })
     });
   </script>
 </body>
