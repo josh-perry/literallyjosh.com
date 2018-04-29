@@ -5,7 +5,9 @@ var permalinks  = require("metalsmith-permalinks");
 var static      = require("metalsmith-static");
 var watch       = require('metalsmith-watch');
 
-Metalsmith(__dirname)
+var debug       = process.argv.includes("debug");
+
+var m = Metalsmith(__dirname)
     .metadata({
         page_title: "Josh Perry",
         url: "https://literallyjosh.com/",
@@ -28,7 +30,9 @@ Metalsmith(__dirname)
         src: "static",
         dest: "."
     }))
-    .use(
+
+if (debug) {
+    m.use(
         watch({
             paths: {
                 "${source}/**/*": true,
@@ -38,7 +42,9 @@ Metalsmith(__dirname)
             livereload: true
         })
     )
-    .build((err) => {
+}
+
+m.build((err) => {
         if (err)
         {
             throw err;
