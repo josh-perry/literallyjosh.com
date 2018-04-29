@@ -1,5 +1,6 @@
 var Metalsmith  = require("metalsmith");
 var layouts     = require("metalsmith-layouts");
+var collections = require("metalsmith-collections");
 var markdown    = require("metalsmith-markdown");
 var permalinks  = require("metalsmith-permalinks");
 var static      = require("metalsmith-static");
@@ -21,6 +22,10 @@ var m = Metalsmith(__dirname)
     })
     .source("./src")
     .destination("./build")
+    .clean(true)
+    .use(collections({
+        posts: "blog/posts/*.md"
+    }))
     .use(markdown())
     .use(permalinks())
     .use(layouts("nunjucks"))

@@ -1,0 +1,26 @@
+{% extends "layouts/layout.njk" %}
+
+{% block content %}
+  {% for post in collections.posts %}
+    <div class="post">
+      <a href="/{{ post.path }}" class="post-wrap-anchor">
+        <div class="post-header">
+          {% if post.image %}
+            <img class="post-featured-image" src="{{ post.image }}"/>
+          {% endif %}
+
+          <div class="post-title">
+            <h1>{{ post.title }}</h1>
+          </div>
+        </div>
+      </a>
+      <div class="post-contents">
+        {{ post.contents | safe | truncate(200) }}
+
+        <p>
+          <a href="/{{ post.path }}">Read more...</a>
+        </p>
+      </div>
+    </div>
+  {% endfor %}
+{% endblock %}
