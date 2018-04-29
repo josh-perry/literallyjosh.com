@@ -1,0 +1,25 @@
+language: node_js
+node_js:
+  - lts/*
+python:
+  - "3.5"
+cache: pip
+before_install:
+  - npm install
+install:
+  - pip install awscli --user
+script:
+  - node index.js
+deploy:
+  on:
+    branch: master
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: literallyjosh
+  skip_cleanup: true
+  local_dir: build
+  cache_control: "max-age=21600"
+after_deploy:
+  - aws configure set preview.cloudfront true
+  - aws cloudfront create-invalidation --distribution-id $CLOUDFRONT_DISTRIBUTION_ID --paths "/*"
