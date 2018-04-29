@@ -12,8 +12,6 @@ var m = Metalsmith(__dirname)
         page_title: "Josh Perry",
         url: "https://literallyjosh.com/",
         urls: {
-            email: "josh@literallyjosh.com",
-            linkedin: "https://www.linkedin.com/in/josh-perry-0a802681",
             twitter: "https://twitter.com/literally_josh",
             github: "https://github.com/josh-perry/",
             blog: "/blog",
