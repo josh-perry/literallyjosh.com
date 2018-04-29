@@ -1,5 +1,5 @@
 ---
-layout: layout.html
+layout: post.njk
 image: /img/posts/jumpingcat.jpg
 
 title: Soon

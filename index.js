@@ -23,7 +23,7 @@ var m = Metalsmith(__dirname)
     .destination("./build")
     .use(markdown())
     .use(permalinks())
-    .use(layouts("handlebars"))
+    .use(layouts("nunjucks"))
     .use(static({
         src: "static",
         dest: "."

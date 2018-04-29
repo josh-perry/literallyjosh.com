@@ -1,5 +1,5 @@
 ---
-layout: layout.html
+layout: post.njk
 title: projects
 ---
 
