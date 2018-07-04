@@ -48,10 +48,9 @@ if (debug) {
 }
 
 m.build((err) => {
-        if (err)
-        {
-            throw err;
-        }
+    if (err) {
+        throw err;
+    }
 
-        console.log("Build finished!");
-    });
+    console.log("Build finished!");
+});
