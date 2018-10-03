@@ -6,9 +6,13 @@ python:
 cache: pip
 before_install:
   - npm install
+  - sudo apt-get update
+  - sudo apt-get install pandoc
 install:
   - pip install awscli --user
 script:
+  - mkdir static/cv
+  - pandoc -s src/cv/index.md -o static/cv/josh-perry.docx
   - node index.js
 deploy:
   on:
