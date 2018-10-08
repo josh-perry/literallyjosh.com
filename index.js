@@ -24,7 +24,11 @@ var m = Metalsmith(__dirname)
     .destination("./build")
     .clean(true)
     .use(collections({
-        posts: "blog/posts/*.md"
+        posts: {
+            pattern: "blog/posts/*.md",
+            sortBy: "date",
+            reverse: true
+        }
     }))
     .use(markdown())
     .use(permalinks())
