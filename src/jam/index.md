@@ -1,0 +1,3 @@
+---
+layout: game-listing.njk
+---

@@ -28,7 +28,12 @@ var m = Metalsmith(__dirname)
             pattern: "blog/posts/*.md",
             sortBy: "date",
             reverse: true
-        }
+	},
+	jamgames: {
+            pattern: "jam/game/*.md",
+	    sortBy: "date",
+	    reverse: true
+	}
     }))
     .use(markdown())
     .use(permalinks())
