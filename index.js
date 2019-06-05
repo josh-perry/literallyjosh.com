@@ -16,6 +16,7 @@ var m = Metalsmith(__dirname)
             twitter: "https://twitter.com/literally_josh",
             github: "https://github.com/josh-perry/",
             blog: "/blog",
+	    todo: "/stuff-i-want-to-do",
             cv: "/cv",
             projects: "/projects"
         }
