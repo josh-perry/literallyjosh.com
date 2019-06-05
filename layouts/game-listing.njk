@@ -1,43 +1,39 @@
-{% extends "layouts/layout.njk" %}
-
-{% block content %}
-  <div class="post">
-    <div class="post-header">
-      <div class="post-title">
-        <h1>Jam Games</h1>
-      </div>
+<div class="post">
+  <div class="post-header">
+    <div class="post-title">
+      <h1>Jam Games</h1>
     </div>
-  {% for g in collections.jamgames %}
-      <div class="post-contents">
-	<h2>{{ g.title }}</h2>
-        {{ g.contents | safe }}
-
-        {% if g.itchembed %}
-	<iframe src="{{ g.itchembed }}" width="552" height="167" frameborder="0"></iframe>
-	{% endif %}
-      </div>
-
-      <hr>
-  {% endfor %}
   </div>
+{% for g in collections.jamgames %}
+    <div class="post-contents">
+    <h2>{{ g.title }}</h2>
+      {{ g.contents | safe }}
 
-  <div class="post">
-    <div class="post-header">
-      <div class="post-title">
-        <h1>One Hour Jam Games</h1>
-      </div>
+      {% if g.itchembed %}
+    <iframe src="{{ g.itchembed }}" width="552" height="167" frameborder="0"></iframe>
+    {% endif %}
     </div>
-  {% for g in collections.1hjamgames %}
-      <div class="post-contents">
-	<h2>{{ g.title }}</h2>
-        {{ g.contents | safe }}
 
-	{% if g.itchembed %}
-	<iframe src="{{ g.itchembed }}" width="552" height="167" frameborder="0"></iframe>
-	{% endif %}
-      </div>
+    <hr>
+{% endfor %}
+</div>
 
-      <hr>
-  {% endfor %}
+<div class="post">
+  <div class="post-header">
+    <div class="post-title">
+      <h1>One Hour Jam Games</h1>
+    </div>
   </div>
-{% endblock %}
+{% for g in collections.1hjamgames %}
+    <div class="post-contents">
+    <h2>{{ g.title }}</h2>
+      {{ g.contents | safe }}
+
+    {% if g.itchembed %}
+    <iframe src="{{ g.itchembed }}" width="552" height="167" frameborder="0"></iframe>
+    {% endif %}
+    </div>
+
+    <hr>
+{% endfor %}
+</div>
